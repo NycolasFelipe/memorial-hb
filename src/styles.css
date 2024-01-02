@@ -1,0 +1,44 @@
+body {
+  background: url("../src/images/sun-pattern.webp");
+}
+
+main {
+  max-width: 400px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+a {
+  color: #333
+}
+
+h1 {
+  font-family: 'Leckerli One', cursive;
+  pointer-events: none;
+}
+h1 .hermano {
+  color: purple;
+}
+h1 .benites {
+  color: blue;
+}
+
+#login {
+  width: 100%;
+  padding: 20px;
+}
+
+#loginUser input,
+#loginPassword input {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#loginPassword span {
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  background: transparent;
+  border: none;
+}
