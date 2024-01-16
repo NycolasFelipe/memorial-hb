@@ -1,0 +1,40 @@
+#posts {
+  padding-bottom: 40px;
+}
+
+#post {
+  background: red;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.post-button-edit {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.post-button-edit {
+  color: grey !important;
+}
+
+.post-images {
+  border: 2px solid #fff;
+  overflow: hidden;
+}
+
+.post-images img {
+  object-fit: cover;
+  background-size: cover;
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+.slick-next {
+  right: 0;
+}

@@ -1,0 +1,34 @@
+a {
+  text-decoration: none !important;
+}
+
+h1 {
+  font-family: 'Leckerli One', cursive;
+  pointer-events: none;
+}
+h1 .hermano {
+  color: purple;
+}
+h1 .benites {
+  color: blue;
+}
+
+#login {
+  width: 100%;
+  padding: 20px;
+}
+
+#loginUser input,
+#loginPassword input {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#loginPassword span {
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  background: transparent;
+  border: none;
+}

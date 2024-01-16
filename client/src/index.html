@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memorial HB - Login</title>
+  <link rel="stylesheet" href="./pages/00-index/styles.css">
+  <link rel="stylesheet" href="../src/resources/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=PT+Sans&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <main class="pt-5">
+    <h1 class="text-center fs-1 mb-5">
+      <span>Memorial da família</span>
+      <br>
+      <span class="hermano">Hermano</span>
+      <span class="benites">Benites</span>
+    </h1>
+    <div id="login" class="bg-light rounded-4">
+      <form id="loginUser" class="form-floating">
+        <input type="text" class="form-control" id="loginUserFloating" placeholder="name@example.com">
+        <label for="loginUserFloating">Nome de usuário</label>
+      </form>
+      <form id="loginPassword" class="form-floating mt-2 d-flex">
+        <input type="password" class="form-control" id="loginPasswordFloating" placeholder="password">
+        <label for="loginPasswordFloating">Senha</label>
+        <span class="input-group-text ms-2" id="loginPasswordEye">
+          <i class="bi bi-eye-slash"></i>
+        </span>
+      </form>
+      <div class="form-check mt-2">
+        <input class="form-check-input" type="checkbox" id="loginKeepSession">
+        <label class="form-check-label" for="loginKeepSession">
+          Manter sessão
+        </label>
+      </div>
+      <button id="loginButton" type="button" class="btn btn-outline-primary w-100 mt-4">Acessar</button>
+      <button id="loginButtonVisitor" type="button" class="btn btn-outline-success w-100 mt-2" onclick="location.href='../src/pages/01-home/index.html';">
+        <i class="bi bi-person-circle pe-2"></i>
+        Acessar como convidado
+      </button>
+    </div>
+  </main>
+  <script type="module" src="./pages/00-index/script.js"></script>
+</body>
+
+</html>
