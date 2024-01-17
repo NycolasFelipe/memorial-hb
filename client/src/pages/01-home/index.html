@@ -7,17 +7,31 @@
   <title>Memorial HB - Login</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="../../resources/css/style.css">
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=PT+Sans&display=swap" rel="stylesheet">
+  <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Jquery image upload -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Slick Slider -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  
+  <!-- Dropzone -->
+  <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+  <!-- ViewerJS -->
+  <link href="../../../node_modules/viewerjs/dist/viewer.css" rel="stylesheet">
+  <script src="../../../node_modules/viewerjs/dist/viewer.js"></script>
 </head>
 
 <body>
@@ -25,76 +39,64 @@
     <h1 class="text-center fs-1 mb-5">
       Publicações
     </h1>
-    <div id="posts">
-      <div id="post" class="bg-light rounded-2 p-4 post">
-        <div class="post-header">
-          <h2>Titulo</h2>
-          <p class="post-location">Rio das ostras</p>
-          <p class="post-date">23 de fevereiro de 2024</p>
-          <button class="post-button-edit btn fs-4"><i class="bi bi-three-dots"></i></button>
-        </div>
-        <div class="post-description">
-          <p class="post-description--title">Descrição</p>
-          <p class="post-description--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis mollitia
-            illo cupiditate officia sapiente numquam accusantium libero temporibus quasi cumque accusamus doloremque,
-            sit quod alias asperiores? Sed, alias vero! Sed?</p>
-        </div>
-        <div class="post-images rounded-2">
-          <img src="https://t4.ftcdn.net/jpg/05/36/57/37/360_F_536573741_FxjIwtgaTzDdy6mRAg6AhFxOjQi08dV5.jpg" alt=""
-            srcset="">
-          <img
-            src="https://img.freepik.com/free-photo/family-spending-time-together-home_23-2149032153.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705276800&semt=ais"
-            alt="">
-          <img src="https://hips.hearstapps.com/hmg-prod/images/family-quotes-1573234196.jpg" alt="">
-        </div>
-      </div>
-      <div id="post" class="bg-light rounded-2 p-4 post">
-        <div class="post-header">
-          <h2>Titulo</h2>
-          <p class="post-location">Rio das ostras</p>
-          <p class="post-date">23 de fevereiro de 2024</p>
-          <button class="post-button-edit btn fs-4"><i class="bi bi-three-dots"></i></button>
-        </div>
-        <div class="post-description">
-          <p class="post-description--title">Descrição</p>
-          <p class="post-description--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis mollitia
-            illo cupiditate officia sapiente numquam accusantium libero temporibus quasi cumque accusamus doloremque,
-            sit quod alias asperiores? Sed, alias vero! Sed?</p>
-        </div>
-        <div class="post-images rounded-2">
-          <img src="https://hips.hearstapps.com/hmg-prod/images/family-quotes-1573234196.jpg" alt="">
-          <img src="https://t4.ftcdn.net/jpg/05/36/57/37/360_F_536573741_FxjIwtgaTzDdy6mRAg6AhFxOjQi08dV5.jpg" alt=""
-            srcset="">
-          <img
-            src="https://img.freepik.com/free-photo/family-spending-time-together-home_23-2149032153.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705276800&semt=ais"
-            alt="">
-        </div>
-      </div>
-      <div id="post" class="bg-light rounded-2 p-4 post">
-        <div class="post-header">
-          <h2>Titulo</h2>
-          <p class="post-location">Rio das ostras</p>
-          <p class="post-date">23 de fevereiro de 2024</p>
-          <button class="post-button-edit btn fs-4"><i class="bi bi-three-dots"></i></button>
-        </div>
-        <div class="post-description">
-          <p class="post-description--title">Descrição</p>
-          <p class="post-description--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis mollitia
-            illo cupiditate officia sapiente numquam accusantium libero temporibus quasi cumque accusamus doloremque,
-            sit quod alias asperiores? Sed, alias vero! Sed?</p>
-        </div>
-        <div class="post-images rounded-2">
-          <img
-            src="https://img.freepik.com/free-photo/family-spending-time-together-home_23-2149032153.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705276800&semt=ais"
-            alt="">
-          <img src="https://t4.ftcdn.net/jpg/05/36/57/37/360_F_536573741_FxjIwtgaTzDdy6mRAg6AhFxOjQi08dV5.jpg" alt=""
-            srcset="">
-          <img src="https://hips.hearstapps.com/hmg-prod/images/family-quotes-1573234196.jpg" alt="">
-        </div>
-      </div>
+    <div id="postCreate" class="mb-5">
+      <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#postModal">
+        Criar Publicação
+      </button>
     </div>
-    </div>
+    <div id="posts"></div>
   </main>
+
+  <!-- Modal Criar Publicação -->
+  <div class="modal fade" id="postModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="border-bottom: none;">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Criar Publicação</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="postModalForm">
+            <div class="mb-3">
+              <label for="postModalTitle">Título</label>
+              <input id="postModalTitle" type="text" class="form-control" placeholder="Ex.: Natal da Família"
+                aria-label="Post Title" aria-describedby="basic-addon1">
+            </div>
+            <div class="mb-3">
+              <label for="postModalLocation">Local</label>
+              <input id="postModalLocation" type="text" class="form-control" placeholder="Ex.: Rio das Ostras"
+                aria-label="Post Location" aria-describedby="basic-addon1">
+            </div>
+            <div class="mb-3">
+              <label for="postModalDescription">Descrição</label>
+              <textarea class="form-control" placeholder="Deixe sua descrição!" id="postModalDescription"
+                style="height: 200px"></textarea>
+            </div>
+            <div class="mb-3">
+              <label>Fotos</label>
+              <!-- Dropzone -->
+              <form action="/target" class="dropzone">
+                <div id="dropzoneDragArea" class="form-group rounded-2">
+                  <span>Arraste aqui ou clique para enviar</span>
+                  <i class="bi bi-cloud-download fs-3"></i>
+                </div>
+                <div class="form-group dropzone-previews py-3"></div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary d-none">Submit</button>
+                </div>
+              </form>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success">Publicar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script type="module" src="./script.js"></script>
 </body>
 

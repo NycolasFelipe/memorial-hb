@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
 #posts {
   padding-bottom: 40px;
 }
 
-#post {
-  background: red;
+.post {
   margin: 0 auto;
-  margin-bottom: 60px;
   position: relative;
 }
 
@@ -19,14 +19,19 @@
   color: grey !important;
 }
 
+.post-location, .post-date {
+  font-family: 'Salsa', cursive;
+}
+
 .post-images {
   border: 2px solid #fff;
   overflow: hidden;
+  height: 300px;
 }
 
 .post-images img {
   object-fit: cover;
-  background-size: cover;
+  height: 300px;
 }
 
 .slick-arrow {
@@ -37,4 +42,48 @@
 
 .slick-next {
   right: 0;
+}
+
+/* Modal */
+#dropzoneDragArea {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100px;
+  text-align: center;
+  border: 1px dashed lightgrey;
+  cursor: pointer;
+}
+
+#dropzoneDragArea i {
+  transition: all 0.2s ease;
+}
+
+#dropzoneDragArea:hover  i {
+  color: lightskyblue;
+  transition: all 0.2s ease;
+}
+
+#dropzoneDragArea > * {
+  pointer-events: none;
+}
+
+.dropzone-previews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dropzone-previews > div {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropzone-previews .dz-details,
+.dropzone-previews .dz-progress,
+.dropzone-previews .dz-error-message,
+.dropzone-previews .dz-success-mark,
+.dropzone-previews .dz-error-mark {
+  display: none;
 }
