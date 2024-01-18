@@ -5,32 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memorial HB - Login</title>
+  <!-- Local styles -->
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="../../resources/css/style.css">
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=PT+Sans&display=swap" rel="stylesheet">
-  <!-- Jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <!-- Jquery image upload -->
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Slick Slider -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <!-- Dropzone -->
-  <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+  <!-- Bootstrap@5.3.2 -->
+  <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Jquery@3.7.1 -->
+  <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- Slick Slider@1.8.2 -->
+  <link rel="stylesheet" href="../../../node_modules/slick-slider/slick/slick.css">
+  <script src="../../../node_modules/slick-slider/slick/slick.min.js"></script>
+  <!-- Dropzone@6.0.0-beta.2 -->
+  <link rel="stylesheet" href="../../../node_modules/dropzone/dist/dropzone.css">
+  <script src="../../../node_modules/dropzone/dist/dropzone-min.js"></script>
   <!-- ViewerJS -->
-  <link href="../../../node_modules/viewerjs/dist/viewer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../node_modules/viewerjs/dist/viewer.css">
   <script src="../../../node_modules/viewerjs/dist/viewer.js"></script>
 </head>
 
@@ -92,6 +87,63 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
           <button type="button" class="btn btn-success">Publicar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Editar Publicação -->
+  <div class="modal fade" id="postEditModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="border-bottom: none;">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Publicação</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <span id="postEditId" class="d-none"></span>
+        </div>
+        <div class="modal-body">
+          <form id="postEditModalForm">
+            <fieldset class="mb-3">
+              <label for="postEditModalTitle">Título</label>
+              <input id="postEditModalTitle" type="text" class="form-control" placeholder="Ex.: Natal da Família"
+                aria-label="PostEdit Title" aria-describedby="basic-addon1" required>
+              <div class="error d-none text-white bg-danger w-100 rounded-2 px-2 mt-1" style="width: max-content;">
+                <i class="bi bi-exclamation-triangle"></i> Título tem que ter ao menos 5 caracteres.
+              </div>
+            </fieldset>
+            <fieldset class="mb-3">
+              <label for="postEditModalLocation">Local</label>
+              <input id="postEditModalLocation" type="text" class="form-control" placeholder="Ex.: Rio das Ostras"
+                aria-label="PostEdit Location" aria-describedby="basic-addon1" required>
+              <div class="error d-none text-white bg-danger w-100 rounded-2 px-2 mt-1" style="width: max-content;">
+                <i class="bi bi-exclamation-triangle"></i> Local tem que ter ao menos 5 caracteres.
+              </div>
+            </fieldset>
+            <fieldset class="mb-3">
+              <label for="postEditModalDescription">Descrição</label>
+              <textarea class="form-control" placeholder="Deixe sua descrição!" id="postEditModalDescription"
+                style="height: 200px"></textarea>
+            </fieldset>
+            <!-- <div class="mb-3">
+            <label>Fotos</label>
+            Dropzone
+            <form action="/target" class="dropzone">
+              <div id="dropzoneDragArea" class="form-group rounded-2">
+                <span>Arraste aqui ou clique para enviar</span>
+                <i class="bi bi-cloud-download fs-3"></i>
+              </div>
+              <div class="form-group dropzone-previews py-3"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary d-none">Submit</button>
+              </div>
+            </form>
+          </div> -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="postEditCancel" type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
+          <button id="postEditSave" type="button" class="btn btn-success">Salvar</button>
         </div>
       </div>
     </div>

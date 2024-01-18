@@ -24,7 +24,9 @@ export class PostView {
           <h2>${post.title}</h2>
           <p class="post-location fs-6 mb-0">${post.location}</p>
           <p class="post-date">${post.date}</p>
-          <button class="post-button-edit btn fs-4"><i class="bi bi-three-dots"></i></button>
+          <button class="post-button-edit btn fs-4" data-bs-toggle="modal" data-bs-target="#postEditModal">
+            <i class="bi bi-three-dots"></i>
+          </button>
         </div>
         <div class="post-description">
           <p>${post.description}</p>

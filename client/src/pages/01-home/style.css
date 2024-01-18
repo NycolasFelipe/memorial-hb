@@ -44,7 +44,7 @@
   right: 0;
 }
 
-/* Modal */
+/* Modal Criar Publicação */
 #dropzoneDragArea {
   display: flex;
   justify-content: center;
@@ -86,4 +86,9 @@
 .dropzone-previews .dz-success-mark,
 .dropzone-previews .dz-error-mark {
   display: none;
+}
+
+/* Modal Editar Publicação */
+#postEditModal .error {
+  cursor: pointer;
 }

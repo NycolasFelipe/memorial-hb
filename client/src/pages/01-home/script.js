@@ -1,5 +1,12 @@
 import { PostView } from "../../components/post-view.js";
 import { Post } from "../../modules/post.js";
+import editPost from "./scripts/editPost.js";
+import hideError from "./scripts/hideError.js";
+import initiateDropzone from "./scripts/initiateDropzone.js";
+import initiateSlickSlider from "./scripts/initiateSlickSlider.js";
+import initiateViewerJs from "./scripts/initiateViewerJs.js";
+import resetErrors from "./scripts/resetErrors.js";
+import savePost from "./scripts/savePost.js";
 
 const postExemplo1 = new Post(
   "Natal da Família",
@@ -10,41 +17,35 @@ const postExemplo1 = new Post(
   "Esse fim de ano foi incrível."
 );
 const postExemplo2 = new Post(
-  "Natal da Família",
-  "Rio das Ostras",
-  `Consequat labore esse aliqua est non consectetur eiusmod et veniam adipisicing reprehenderit qui.
-  Elit ad minim non nostrud reprehenderit.
-  Consectetur in culpa amet eiusmod.`,
+  "Ano novo da Família",
+  "Resende",
+  `Officia Lorem qui dolore amet occaecat nulla labore ea laborum nulla exercitation.
+  Eiusmod veniam nulla laboris.
+  Irure dolore et reprehenderit Lorem.
+  Cillum in quis duis velit ex elit aliquip elit tempor fugiat occaecat.`,
   "Esse fim de ano foi incrível."
 );
 let posts = [postExemplo1, postExemplo2];
 new PostView(posts).render();
-
 //$("#postCreate button").click();
 
-//Slick slider
-$('.post-images').slick({
-  arrows: true,
-  infinite: true,
-  lazyLoad: true,
-  prevArrow: "<button type='button' class='slick-prev pull-left btn h-100'><i class='fa fa-angle-left fs-4 text-white' aria-hidden='true'></i></button>",
-  nextArrow: "<button type='button' class='slick-next pull-right btn h-100'><i class='fa fa-angle-right fs-4 text-white' aria-hidden='true'></i></button>",
-});
+//Initiate Slick slider
+initiateSlickSlider();
 
-//Viewer
-$(document).ready(function () {
-  const gallery = new Viewer(document.getElementById("posts"), {
-    navbar: false,
-    title: false,
-    toolbar: false,
-    movable: false,
-  });
-});
+//Initiate ViewerJS
+initiateViewerJs();
 
-//Dropzone
-const dropzone = new Dropzone("#dropzoneDragArea", {
-  previewsContainer: ".dropzone-previews",
-  maxFiles: 6,
-  uploadMultiple: true,
-  url: "/file/post"
-});
+//Initiate Dropzone
+initiateDropzone();
+
+//Reseta mensagens de erro ao sair do modal de edição
+$.each([$("#postEditCancel"), $("#postEditModal .btn-close")], (i, e) => resetErrors(i, e));
+
+//Popula modal com as informações da publicação a ser editada
+$(".post-button-edit").click((e) => editPost(e));
+
+//Salva edições feitas na publicação
+$("#postEditSave").click(() => savePost());
+
+//Esconde mensagem de erro quando clicada
+$("#postEditModal .error").click((e) => hideError(e));
